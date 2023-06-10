@@ -8,6 +8,7 @@ function playRound(playerSelection, comptuerSlection) {
   if (playerSelection === comptuerSlection) {
     return "This is a Draw!";
   }
+  //Computer wins
   if (playerSelection === "scissors" && comptuerSlection === "rock") {
     return "You lose! rock beats scissors";
   }
@@ -17,7 +18,7 @@ function playRound(playerSelection, comptuerSlection) {
   if (playerSelection === "paper" && comptuerSlection === "scissors") {
     return "You lose! scissors beats paper";
   }
-
+  // Player wins
   if (playerSelection === "rock" && comptuerSlection === "scissors") {
     return "You win! rock beats scissors";
   }
@@ -29,6 +30,9 @@ function playRound(playerSelection, comptuerSlection) {
   }
 }
 
-const playerSelection = "";
+const playerSelection = prompt().toLocaleLowerCase();
 const comptuerSlection = getComputerChoice();
-console.log(playRound(playerSelection, comptuerSlection));
+
+for (let i = 0; i < 5; i++) {
+  console.log(playRound(playerSelection, comptuerSlection));
+}
