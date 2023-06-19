@@ -13,14 +13,20 @@
       <button class="selection" data-selection="scissors">🖖</button>
     </div>
     <div class="result">
-      <h2>
+      <div>
         Player
-        <span class="result-score">0</span>
-      </h2>
-      <h2>
+        <span class="result-score" data-your-score>0</span>
+      </div>
+      <div data-final>
         Computer
-        <span class="result-score">0</span>
-      </h2>
+        <span class="result-score" data-computer-score>0</span>
+      </div>
+      <div>
+        <div>
+          Draw
+          <span data-score-draw>0</span>
+        </div>
+      </div>
     </div>
   </body>
   <script src="index.js" defer></script>
